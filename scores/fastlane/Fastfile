@@ -1,0 +1,10 @@
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+desc "Run all unit tests"
+lane :unit_tests do
+    reset_simulator_contents
+    run_tests(devices: ["iPhone SE"], clean: true)
+end
